@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Sign up Page</title>
+		<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+	</head>
+
+	<body>
+		<h1 style="text-align: center;">Welcome to my page</h1>
+		<h3>Enter your information here for signing up :)</h3>
+
+		<form ng-app="myApp" ng-controller="meCtrl" name="userForm" novalidate>
+			<div>
+				<p> Username(Email):<input name="email" type="email" ng-model="email" required></p>
+				<span style="color:red" ng-show="userForm.email.$dirty && userForm.email.$invalid">
+				<span ng-show="userForm.email.$error.required">Requird!</span>
+				<span ng-show="userForm.email.$error.email">Not valid email!</span>
+				</span>
+			</div>
+			<div>
+				<p> Password:<input type="password" name="password" ng-model="password" ng-minlength="6" ng-maxlength="12"></p>
+				<span style="color:red" ng-show="userForm.password.$dirty && userForm.password.$invalid">
+				<span ng-show="userForm.password.$error.minlength">Password is too short.</span>
+				<span ng-show="userForm.password.$error.maxlength">Password is too long.</span>
+				</span>
+        	</div>
+        	
+			<br>
+
+			<p> FirstName:<input type="text" ng-model="firstname" ></p>
+			<p> LastName:<input type="text" ng-model="lastname"></p>
+			<p> Sex: <input type = "radio" ng-model = "sex" value = "Male">Male <input type = "radio" ng-model = "sex" value = "Female">Female</p>
+			<p> DOB:<input type="date" name="DOB" ng-model="DOB" placeholder="yyyy-MM-dd" min="1900-01-01" max="2016-10-07"></p>
+			<p> Phone Number:<input type="number" ng-model="phonenumber" ></p>
+			<p> Address:<input type="text" ng-model="address"></p>
+			<p> City: <input type = "text" ng-model = "city" ng-pattern="/a-zA-Z/"></p>
+         	<p>State:<select name="state" ng-model="state">
+                <option value="CA">California</option>
+                <option value="HI">Hawaii</option>
+                <option value="MA">Massachusetts</option>
+                <option value="NY">New York</option>
+                <option value="OH">Ohio</option>
+                <option value="WA">Washington</option>
+                </select> </p>
+			<p> Zipcode:<input type="number" ng-model="zipcode"></p>
+
+			<button ng-click="submit()">Submit</button><br>
+				<div>{{res|json}}</div>
+		</div>
+
+
+		<script>
+			var app = angular.module('myApp', []);
+			app.controller('meCtrl', function($scope) {
+				$scope.submit = function(){
+					var userlist = {
+					username: $scope.email,
+					password: $scope.password,
+					firstName: $scope.firstname,
+					lastname: $scope.lastname,
+					sex: $scope.sex,
+					DOB: $scope.DOB,
+					Phonenumber: $scope.phonenumber,
+					address: $scope.address,
+					city: $scope.city,
+					state: $scope.state,
+					zipcode: $scope.zipcode
+					};
+					$scope.res = userlist;
+				}
+				
+			});
+		</script>
+	</body>
+</html>
