@@ -1,3 +1,4 @@
+//controller:
 var app = angular.module("myApp", []);
 app.controller('meCtrl', function($scope) {
             $scope.res = [];
