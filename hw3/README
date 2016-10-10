@@ -3,17 +3,17 @@ Collected user details in a JSON object and written the JSON object to screen. (
 
 
 Steps:
-Deploy the signuppage app on my VM:
-1. Switch to root sudo su – 
+Deploy the signuppage application on VM:
+1. Switch to root: sudo su – 
 2. Enter command for update and install:
-apt-get update
-apt-get install apache2
-apt-get install php
+	apt-get update
+	apt-get install apache2
+	apt-get install php
 3. Go to external IP in browser to check whether apache works
 	http://external IP
-4. Enter cd /var/www/html
-5. Create hw3signuppage.html and hw3ang.js(controller) use the command: 
-	vi hw3signuppage.html 
-	vi hw3ang.js
+4. Enter apache2 default DocumentRoot:  cd /var/www/html
+5. Create signuppage.html and controller.js using the command: 
+	vi signuppage.html 
+	vi controller.js
 
-Finally, search http://external IP/hw3signuppage.html for result and test.
+Search http://external IP/hw3signuppage.html for result and test.
