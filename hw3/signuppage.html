@@ -7,8 +7,8 @@
    </head>
 
    <body>
-      <script src="controller.js"></script>
-      <h1 style="text-align: center;">Welcome to Kexuan's page</h1>
+    <script src="controller.js"></script>
+    <h1 style="text-align: center;">Welcome to Kexuan's page</h1>
     <h3>Enter your information here for signing up :)</h3>
 
     <form ng-app="myApp" ng-controller="meCtrl" name="userForm" novalidate>
@@ -26,7 +26,7 @@
           <span ng-show="userForm.password.$error.minlength">Password is too short.</span>
           <span ng-show="userForm.password.$error.maxlength">Password is too long.</span>
         </span>
-        </div>
+      </div>
           
       <br>
 
@@ -43,16 +43,15 @@
           <option value="MA">Massachusetts</option>
           <option value="NY">New York</option>
           <option value="OH">Ohio</option>
-          <option value="WA">Washington</option>
-      </select> </p>
+          <option value="WA">Washington</option></select> 
+      </p>
       <p> Zipcode:<input type="string" ng-model="zipcode"></p>
 
-         <button ng-click="submit()">Submit</button>
-         <button ng-click="reset()">Reset</button><br>
+      <button ng-click="submit()">Submit</button>
+      <button ng-click="reset()">Reset</button><br>
          
-         <textarea style="width:300px; height: 300px;">result: {{res|json}}</textarea>
-         
-        </div>
+      <textarea style="width:300px; height: 300px;">result: {{res|json}}</textarea>
+      </form>
       
    </body>
 </html>
