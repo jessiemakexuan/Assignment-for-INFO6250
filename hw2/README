@@ -1,0 +1,19 @@
+Goal: 
+1. Design a sign up page that greets the user and ask for relevant details. 
+2. Validate it and show it in the browser with JSON pattern. 
+3. Deploy this app in the cloud. 
+4. Deploy this app behind load balancer and run it in two VMs
+
+Steps:
+Deploy the signuppage app on my VM:
+1. Switch to root sudo su – 
+2. Enter command for update and install:
+apt-get update
+apt-get install apache2
+apt-get install php
+3. Go to external IP in browser to check whether apache works
+	http://external IP
+4. Enter cd /var/www/html
+5. Create signuppage.html vi signuppage.html 
+
+Finally, search http://external IP/signuppage.html for result and test.
