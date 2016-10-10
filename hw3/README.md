@@ -18,3 +18,8 @@
 
 ## Get result in browser
 	Search http://external IP/signuppage.html for result and test.
+	tips(for validate):
+	1.As the username, email is required and it must follow the right pattern.
+	2.password must has 6-12 characters,and it is also required
+	3.DOB must earlier than today.
+	
