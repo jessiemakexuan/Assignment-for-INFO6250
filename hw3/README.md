@@ -1,9 +1,9 @@
-#Goal: 
+# Goal: 
 Collected user details in a JSON object and written the JSON object to screen. (Code must follow MVC)
 
 
-#Steps:
-##Deploy the signuppage application on VM:
+# Steps:
+## Deploy the signuppage application on VM:
 1. Switch to root: sudo su – 
 2. Enter command for update and install:
 	apt-get update
@@ -16,4 +16,4 @@ Collected user details in a JSON object and written the JSON object to screen. (
 	vi signuppage.html 
 	vi controller.js
 
-##Search http://external IP/hw3signuppage.html for result and test.
+## Search http://external IP/hw3signuppage.html for result and test.
