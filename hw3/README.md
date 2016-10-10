@@ -16,4 +16,5 @@
 		vi signuppage.html 
 		vi controller.js
 
-## Search http://external IP/hw3signuppage.html for result and test.
+## Get result in browser
+	Search http://external IP/signuppage.html for result and test.
