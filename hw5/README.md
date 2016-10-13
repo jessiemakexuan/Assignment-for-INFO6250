@@ -22,7 +22,9 @@
         sudo ./install_server.sh
         sudo service redis_6379 start
 ## 2.Enter /var/www/html, copy my hw4signuppage.html, hw4controller.js, app.php into your folder.
-  
+      hw4signuppage.html
+      hw4controller.js
+      app.php
 ## 3.Run it through your VM's public IP
       http://public ip/hw4signuppage.html
 ## 4.Check whether all of the information are saved in Redis
