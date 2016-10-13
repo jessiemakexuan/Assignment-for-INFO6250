@@ -18,7 +18,6 @@ RedisController.prototype.onRedis = function() {
            state: $scope.state,
            zipcode: $scope.zipcode
            };
-        $scope.message.push(userdata);
         this.scope_.message.push(this.scope_.userdata);
         var value = this.scope_.userdata;
         this.http_.get("app.php?cmd=set&key=messages&value=" + value)
