@@ -35,6 +35,6 @@ redisApp.controller('RedisCtrl', function ($scope, $http, $location) {
         $scope.controller.http_.get("app.php?cmd=get&key=messages")
             .success(function(data) {
                 console.log(data);
-                $scope.messages = data.data.split(",");
+                $scope.message = data.data.split(",");
             });
 });
