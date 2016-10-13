@@ -29,4 +29,14 @@
       http://public ip/hw4signuppage.html
 ## 4.Check whether all of the information are saved in Redis
       http://public ip/app.php?cmd=get&key=message
-      
+      [notice: but now, it doesn't work, it seems like there is some mistake on Redis]
+        <br />
+        <b>Fatal error</b>:  Uncaught Predis\Connection\ConnectionException: php_network_getaddresses: getaddrinfo failed: Name or service not known [tcp://redis-slave:6379] in /usr/share/php/Predis/Connection/AbstractConnection.php:155
+        Stack trace:
+        #0 /usr/share/php/Predis/Connection/StreamConnection.php(128): Predis\Connection\AbstractConnection-&gt;onConnectionError('php_network_get...', 0)
+        #1 /usr/share/php/Predis/Connection/StreamConnection.php(178): Predis\Connection\StreamConnection-&gt;createStreamSocket(Object(Predis\Connection\Parameters), 'tcp://redis-sla...', 4)
+        #2 /usr/share/php/Predis/Connection/StreamConnection.php(100): Predis\Connection\StreamConnection-&gt;tcpStreamInitializer(Object(Predis\Connection\Parameters))
+        #3 /usr/share/php/Predis/Connection/AbstractConnection.php(81): Predis\Connection\StreamConnection-&gt;createResource()
+        #4 /usr/share/php/Predis/Connection/StreamConnection.php(258): Predis\Connection\AbstractConnection-&gt;connect()
+        #5 /usr/share/php/Predis/Connection/AbstractConnection.php(180): Predis\Connection\StreamCon in <b>/usr/share/php/Predis/Connection/AbstractConnection.php</b> on line <b>155</b><br />
+
