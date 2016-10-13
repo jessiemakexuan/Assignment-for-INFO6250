@@ -28,5 +28,5 @@
 ## 3.Run it through your VM's public IP
       http://public ip/hw4signuppage.html
 ## 4.Check whether all of the information are saved in Redis
-      http://public ip/app.php?cmd=get&key=messages
+      http://public ip/app.php?cmd=get&key=message
       
