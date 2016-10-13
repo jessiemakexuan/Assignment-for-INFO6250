@@ -2,7 +2,7 @@
     Design a signuppage using AngularJS. 
     After click submit button, collect all the input information into Raids
 # Steps:
-    ## Deploy apache + php+redis+redis client 
+## Deploy apache + php+redis+redis client 
       In your own VM, please input these command: 
         sudo apt-get update
         sudo apt-get install apache2
@@ -21,10 +21,10 @@
         cd utils
         sudo ./install_server.sh
         sudo service redis_6379 start
-  ## Enter /var/www/html, create hw4signuppage.html, hw4controller.js, app.php in this folder.
+## Enter /var/www/html, create hw4signuppage.html, hw4controller.js, app.php in this folder.
   
-  ## Run it through your VM's public IP
+## Run it through your VM's public IP
       http://public ip/hw4signuppage.html
-  ## Check whether all of the information are saved in Redis
+## Check whether all of the information are saved in Redis
       http://public ip/app.php?cmd=get&key=messages
       
