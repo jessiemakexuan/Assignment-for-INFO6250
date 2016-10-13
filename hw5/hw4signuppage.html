@@ -8,18 +8,15 @@
     <script src="hw4controller.js"></script>
     <h1 style="text-align: center;">Welcome to Kexuan's page</h1>
     <h3>Enter your information here for signing up :)</h3>
-    <form ng-app="redis" ng-controller="RedisCtrl" name="userForm" novalidate>
+    <form ng-app="redis" ng-controller="RedisCtrl">
       
-        <p> Username(Email):<input name="email" type="email" ng-model="email" ></p>  
-        <p> Password:<input type="password" name="password" ng-model="password"></p> 
-          
-      <br>
+        <p> Username(Email):<input type="email" ng-model="email" ></p>  
+        <p> Password:<input type="password" ng-model="password"></p> 
       <p> FirstName:<input type="text" ng-model="firstname" ></p>
       <p> LastName:<input type="text" ng-model="lastname"></p>
       <p> Sex: <input type = "radio" ng-model = "sex" value = "Male">Male <input type = "radio" ng-model = "sex" va
 lue = "Female">Female</p>
-      <p> DOB:<input type="date" name="DOB" ng-model="DOB" placeholder="yyyy-MM-dd" min="1900-01-01" max="2016-10-1
-1"></p>
+      <p> DOB: <input type="date" ng-model="DOB" placeholder="YYYY-MM-DD" ></p>
       <p> Phone Number:<input type="number" ng-model="phonenumber" ></p>
       <p> Address:<input type="text" ng-model="address"></p>
       <p> City: <input type = "text" ng-model = "city"></p>
@@ -33,7 +30,7 @@ lue = "Female">Female</p>
       </p>
       <p> Zipcode:<input type="string" ng-model="zipcode"></p>
 
-      <button type="button" class="btn btn-primary" ng-click="controller.onRedis()">Submit</button>
+      <button ng-click="controller.onRedis()">Submit</button>
       <br>   
       <textarea style="width:300px; height: 300px;">result: {{message|json}}</textarea>
       </form>   
