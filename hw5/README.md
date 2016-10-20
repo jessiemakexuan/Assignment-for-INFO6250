@@ -21,10 +21,10 @@
         cd utils
         sudo ./install_server.sh
         sudo service redis_6379 start
-## 2.Enter /var/www/html, copy my hw4signuppage.html, hw4controller.js, app.php into your folder.
-      hw4signuppage.html
-      hw4controller.js          
-      app.php
+## 2.Enter /var/www/html, copy my hw5.html, hw5controller.js, map.php into your folder.
+      hw5.html
+      hw5controller.js          
+      map.php
 ## 3.Add redis-master redis-slave behind 127.0.0.1  loaclhost in /etc/hosts
       127.0.0.1 localhost redis-master redis-slave
 ## 4.Run it through your VM's public IP
