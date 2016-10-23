@@ -13,12 +13,12 @@ angMod.controller('mecontroller', function($scope, $http, $cookieStore) {
     }
     /*sign up page*/
     $scope.signup = function(){
-        angular.forEach($scope.info, function(value, key){
-        console.log(key+" : "+value);
+        angular.forEach($scope.input, function(value, key){
+        // console.log(key+" : "+value);
             $http.get("map.php?cmd=set&key="+key+"&value="+value)
-                .success(function (data, status, headers, config) {
+                .success(function () {
                     $scope.redisResponse = "Updated.";
-                    console.log("Set Secceed.");
+                    // console.log("Set Secceed.");
                 });
             
         });
@@ -27,25 +27,25 @@ angMod.controller('mecontroller', function($scope, $http, $cookieStore) {
     }
     /*reset inputs*/
     $scope.reset = function(){
-        $scope.info.email = "";
-        $scope.info.password = "";
+        $scope.input.email = "";
+        $scope.input.password = "";
     }
 
 
     /* log in page*/
     $scope.login = function(){
         $http.get("map.php?cmd=get&key=email")
-            .success(function (data, status, headers, config) {
-                console.log("Get Succeed: ");
-                console.log("DATA: "+ data);
-                console.log("DATA.DATA: "+data.data);
+            .success(function (data) {
+                // console.log("Get Succeed: ");
+                // console.log("DATA: "+ data);
+                // console.log("DATA.DATA: "+data.data);
                  if(data.data == $scope.user.email){
                     $http.get("map.php?cmd=get&key=password")
-                    .success(function (data2, status, headers, config) {
+                    .success(function (data2) {
                         if(data2.data==$scope.user.password){
-                            location.href = "http://www.info6250.com";
                             $cookieStore.put("email", $scope.user.email);
                             $cookieStore.put("password", $scope.user.password);
+                            location.href = "http://www.info6250.com";
                         }
                         else{
                             alert("Wrong password");
@@ -58,7 +58,7 @@ angMod.controller('mecontroller', function($scope, $http, $cookieStore) {
                 }
                 
             })
-            .error(function (data, status, header, config) {
+            .error(function () {
                 console.log("Can't get data from redis");
             });
     }
