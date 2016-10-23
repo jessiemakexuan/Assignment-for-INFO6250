@@ -4,14 +4,14 @@ angMod.controller('mecontroller', function($scope, $http, $cookieStore) {
     var cookieEmail = $cookieStore.get("email");
     var cookiePassword = $cookieStore.get("password");
     if(cookieEmail!=undefined&&cookiePassword!=undefined){
-        if (confirm("Hi" + cookieEmail+", log in directly?") == false) {
+        if (confirm("Hi " + cookieEmail+" , Welcome back! log in directly?") == true) {
             location.href = "http://www.info6250.com/";
         } else {
-           
+           //login with another username
         }
         
     }
-    /* Submit sign up form*/
+    /*sign up page*/
     $scope.signup = function(){
         angular.forEach($scope.info, function(value, key){
         console.log(key+" : "+value);
@@ -25,20 +25,19 @@ angMod.controller('mecontroller', function($scope, $http, $cookieStore) {
         $scope.reset();
         //location.href = "login.html";
     }
-    /*Cancel sign up process*/
+    /*reset inputs*/
     $scope.reset = function(){
         $scope.info.email = "";
         $scope.info.password = "";
     }
-    /* Submit log in form*/
+
+
+    /* log in page*/
     $scope.login = function(){
         $http.get("map.php?cmd=get&key=email")
             .success(function (data, status, headers, config) {
                 console.log("Get Succeed: ");
                 console.log("DATA: "+ data);
-                console.log("STATUS: "+status);
-                console.log("HEADERS:"+headers);
-                console.log("CONFIG: "+config);
                 console.log("DATA.DATA: "+data.data);
                  if(data.data == $scope.user.email){
                     $http.get("map.php?cmd=get&key=password")
@@ -49,7 +48,7 @@ angMod.controller('mecontroller', function($scope, $http, $cookieStore) {
                             $cookieStore.put("password", $scope.user.password);
                         }
                         else{
-                            alert("your password is not corrected");
+                            alert("Wrong password");
                             $scope.user.password = "";
                         }
                     })
@@ -60,8 +59,7 @@ angMod.controller('mecontroller', function($scope, $http, $cookieStore) {
                 
             })
             .error(function (data, status, header, config) {
-                alert("Cann't find you, you need sign up first!");
-                console.log(data);
+                console.log("Can't get data from redis");
             });
     }
 });
