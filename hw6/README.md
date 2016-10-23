@@ -20,8 +20,8 @@
         cd utils
         sudo ./install_server.sh
         sudo service redis_6379 start
-## 2.Enter /var/www/html, sudo git clone 
+## 2.Enter /var/www/html, sudo git clone https://github.com/jessiemakexuan/Assignment-for-INFO6250.git
 ## 3.Add redis-master redis-slave behind 127.0.0.1  loaclhost in /etc/hosts
       127.0.0.1 localhost redis-master redis-slave
 ## 4.Run it through your VM's public IP
-      http://public ip/hw6/
+      http://public ip/Assignment-for-INFO6250/hw6/
