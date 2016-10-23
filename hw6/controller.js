@@ -23,7 +23,7 @@ angMod.controller('mecontroller', function($scope, $http, $cookieStore) {
             
         });
         $scope.reset();
-        //location.href = "login.html";
+        location.href = "login.html";
     }
     /*reset inputs*/
     $scope.reset = function(){
