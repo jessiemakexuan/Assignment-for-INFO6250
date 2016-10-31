@@ -1,5 +1,6 @@
 # Goal:
-    Design a online chat system using AngularJS and redis. 
+    Design a online chat system using AngularJS and redis. (include main page, sign up page, log in page and chat page)
+    
 # Steps:
 ## 1.Deploy apache + php+redis+redis client 
       In your own VM, please input these command: 
