@@ -39,5 +39,4 @@
 #Results:
 	Here is my main page: http://104.154.229.10/jessie.com/
 	Here is my GitHub URL: https://github.com/jessiemakexuan/jessie.com
-	Our customer will see this year’s total hits in the main page. It gives them a feeling that our website is very popular (If our website only has a little user, just delete this part in main page). 
-For business analyst, they can click “More hits history” link or go to the counter history page directly through http://104.154.229.10/jessie.com/counterhistory.html . For example, they can enter every specific hour of a day such like 2016-11-02 10, gather all of the hit times data, draw a diagram to find the rush hour of a day. Use this useful data to modify the capacity.
+	Our customer will see this year’s total hits in the main page. It gives them a feeling that our website is very popular (If our website only has a little user, just delete this part in main page). For business analyst, they can click “More hits history” link or go to the counter history page directly through http://104.154.229.10/jessie.com/counterhistory.html . For example, they can enter every specific hour of a day such like 2016-11-02 10, gather all of the hit times data, draw a diagram to find the rush hour of a day. Use this useful data to modify the capacity.
